@@ -141,17 +141,17 @@ function updateStats() {
     if (successRate >= 80) {
 
         predictionText.innerHTML =
-            " تقدري تنجحي كان معاد ترقدي 😂💔";
+            "  شوفيلك عريس أحسن 😭💔";
 
     } else if (successRate >= 50) {
 
         predictionText.innerHTML =
-            "☕ الخطر متوسط";
+            " شوفيلك عريس أحسن 😭💔";
 
     } else {
 
         predictionText.innerHTML =
-            "😴 النوم أقوى من التكامل";
+            " شوفيلك عريس أحسن 😭💔";
     }
 }
 
