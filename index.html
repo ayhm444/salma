@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هل ستنجح سلمى في Calculus 2؟ 😴📚</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Background -->
+    <div class="floating-emojis">
+        <span>😴</span>
+        <span>📚</span>
+        <span>☕</span>
+        <span>💖</span>
+        <span>✨</span>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                نظام تحليل نسبة نجاح سلمى
+            </div>
+
+            <div class="salma-image">
+                <img src="/photo_2026-06-21_00-56-56.jpg" alt="Salma">
+            </div>
+
+            <h1>
+                زعما سلمى بتنجح في امتحان رياضة 2؟ 😴📚
+            </h1>
+
+            <p>
+                    نحس فيك قاعدة راقدة هي هي نشوفوك بتصفي او لا 🤣  
+            </p>
+
+            <button id="startBtn">
+                🚨 ابدي الاختبار 👉
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup">
+
+            <button id="closeBtn">
+                ✖
+            </button>
+
+            <img src="/photo_2026-06-21_00-56-40.jpg" alt="Salma Study">
+
+            <h2>
+                ⏳ الوقت المزال لي امتحان رياضة 2
+            </h2>
+
+            <div id="countdown">
+
+                <div>
+                    <span id="days">00</span>
+                    <small>يوم</small>
+                </div>
+
+                <div>
+                    <span id="hours">00</span>
+                    <small>ساعة</small>
+                </div>
+
+                <div>
+                    <span id="minutes">00</span>
+                    <small>دقيقة</small>
+                </div>
+
+                <div>
+                    <span id="seconds">00</span>
+                    <small>ثانية</small>
+                </div>
+
+            </div>
+
+            <p>
+                اكيده تفرجتي علي مقاطعي صح🥲؟ هي نجربوك   
+            </p>
+
+            <button id="rescueBtn">
+                تجربة الاختبار
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Stats -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h3>⭐ النقاط</h3>
+            <span id="score">0</span>
+        </div>
+
+        <div class="stat-card">
+            <h3>  التركيز</h3>
+            <span id="focus">50%</span>
+        </div>
+
+        <div class="stat-card">
+            <h3>  المستوى</h3>
+            <span id="level">1</span>
+        </div>
+
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+
+        <button id="coffeeBtn">
+            ☕ قهوة
+        </button>
+
+        <button id="sleepBtn">
+            😴 نوم
+        </button>
+
+        <button id="studyBtn">
+            📚 تلميح
+        </button>
+
+        <button id="alarmBtn">
+            🚨 طوارئ
+        </button>
+
+    </section>
+
+    <div class="snooze-container">
+
+
+
+    </div>
+
+    <!-- Game Section -->
+    <section class="game-section">
+
+        <h2>
+            الاختبار  
+        </h2>
+
+        <!-- Level 1 -->
+        <div class="level active" id="level1">
+
+            <h3>
+                🟢 المستوى 1
+            </h3>
+
+            <p>
+                تكاملات سهلة جداً
+            </p>
+
+            <div class="question-box">
+
+                <h4>
+                    ما تكامل 1 ؟
+                </h4>
+
+                <div class="answers">
+
+                    <button class="answer" data-correct="true">
+                        x + C
+                    </button>
+
+                    <button class="answer">
+                        1 + C
+                    </button>
+
+                    <button class="answer">
+                        x²
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Level 2 -->
+        <div class="level locked" id="level2">
+
+            <h3>
+                🟡 المستوى 2
+            </h3>
+
+            <p>
+                سهل   
+            </p>
+
+            <div class="question-box">
+
+                <h4>
+                    ما تكامل 2x ؟
+                </h4>
+
+                <div class="answers">
+
+                    <button class="answer" data-correct="true">
+                        x² + C
+                    </button>
+
+                    <button class="answer">
+                        2x²
+                    </button>
+
+                    <button class="answer">
+                        x + C
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Boss -->
+        <div class="level locked" id="level3">
+
+            <h3>
+                🔴 المستوى 3          
+            </h3>
+
+            <p>
+                اصعبً
+            </p>
+
+            <div class="question-box">
+
+                <h4>
+                    ما تكامل (2x + 1) ؟
+                </h4>
+
+                <div class="answers">
+
+                    <button class="answer" data-correct="true">
+                        x² + x + C
+                    </button>
+
+                    <button class="answer">
+                        2x² + x
+                    </button>
+
+                    <button class="answer">
+                        x² + C
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Success Prediction -->
+    <section class="prediction">
+
+        <h2>
+            📊 توقع النجاح
+        </h2>
+
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <p id="predictionText">
+            شوفيلك عريس أحسن 😭💔
+        </p>
+
+    </section>
+
+    <!-- AI Messages -->
+    <section class="ai-box">
+
+        <h2>
+            🤖 تقرير الذكاء الاصطناعي
+        </h2>
+
+        <p id="aiMessage">
+            باهي بشوية تنقيل علي طاولة تنجحي 🤣
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>
+            💌
+        </h2>
+
+        <p>
+                هدية من أيهم 🤍
+        </p>
+
+        <p>
+            أن شاء الله غيرت من نفسيتك شوي وشجعك تصفي مادة 🙂🤍
+        </p>
+
+        <h3>
+            بالتوفيق  سلمى 💖
+        </h3>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
